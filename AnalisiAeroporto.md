@@ -65,9 +65,9 @@ Dal modello E/R è possibile derivare il modello logico o schema.
 
 Legenda: **chiave_primaria**, *chiave_esterna*
 
-funzionari(**id_funzionario**, password)
-addetti(**id_addetto**, *id_funzionario*)
-controlli(**id_controllo**, punto_controllo, inizio_controllo, durata_controllo, note, chiuso, *id_addetto*)
-contestazioni(**id_contestazione**, descrizione, *id_controllo*)
-controlli_merci(**id_controllo_merci**, esito, dazi, descrizione, categoria, quantita, *id_controllo*)
-controlli_passeggeri(**id_controllo_passeggeri**, esito, nome, cognome, nazionalita, aeroporto_partenza, aeroporto_arrivo, tipo_documento, n_documento, motivo_viaggio, note, *id_controllo*)
+funzionari(**id_funzionario**, password)\
+addetti(**id_addetto**, *id_funzionario*)\
+controlli(**id_controllo**, punto_controllo, inizio_controllo, durata_controllo, note, chiuso, *id_addetto*)\
+contestazioni(**id_contestazione**, descrizione, *id_controllo*)\
+controlli_merci(**id_controllo_merci**, esito, dazi, descrizione, categoria, quantita, *id_controllo*)\
+controlli_passeggeri(**id_controllo_passeggeri**, esito, nome, cognome, nazionalita, aeroporto_partenza, aeroporto_arrivo, tipo_documento, n_documento, motivo_viaggio, note, *id_controllo*)\
