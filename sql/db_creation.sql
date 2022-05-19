@@ -56,9 +56,9 @@ CREATE TABLE `controlli_merci` (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 -- --------------------------------------------------------
 --
--- Struttura della tabella `controlli_paseggeri`
+-- Struttura della tabella `controlli_passeggeri`
 --
-CREATE TABLE `controlli_paseggeri` (
+CREATE TABLE `controlli_passeggeri` (
     `id_controllo_passeggeri` int(11) NOT NULL,
     `esito` enum('passato', 'fermo') DEFAULT NULL,
     `nome` varchar(32) DEFAULT NULL,
@@ -102,9 +102,9 @@ ALTER TABLE `controlli_merci`
 ADD PRIMARY KEY (`id_controllo_merci`),
     ADD KEY `id_controllo` (`id_controllo`);
 --
--- Indici per le tabelle `controlli_paseggeri`
+-- Indici per le tabelle `controlli_passeggeri`
 --
-ALTER TABLE `controlli_paseggeri`
+ALTER TABLE `controlli_passeggeri`
 ADD PRIMARY KEY (`id_controllo_passeggeri`),
     ADD KEY `id_controllo` (`id_controllo`);
 --
@@ -131,9 +131,9 @@ MODIFY `id_controllo` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `controlli_merci`
 MODIFY `id_controllo_merci` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT per la tabella `controlli_paseggeri`
+-- AUTO_INCREMENT per la tabella `controlli_passeggeri`
 --
-ALTER TABLE `controlli_paseggeri`
+ALTER TABLE `controlli_passeggeri`
 MODIFY `id_controllo_passeggeri` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Limiti per le tabelle scaricate
@@ -154,10 +154,10 @@ ADD CONSTRAINT `controlli_ibfk_1` FOREIGN KEY (`id_addetto`) REFERENCES `addetti
 ALTER TABLE `controlli_merci`
 ADD CONSTRAINT `controlli_merci_ibfk_1` FOREIGN KEY (`id_controllo`) REFERENCES `controlli` (`id_controllo`);
 --
--- Limiti per la tabella `controlli_paseggeri`
+-- Limiti per la tabella `controlli_passeggeri`
 --
-ALTER TABLE `controlli_paseggeri`
-ADD CONSTRAINT `controlli_paseggeri_ibfk_1` FOREIGN KEY (`id_controllo`) REFERENCES `controlli` (`id_controllo`);
+ALTER TABLE `controlli_passeggeri`
+ADD CONSTRAINT `controlli_passeggeri_ibfk_1` FOREIGN KEY (`id_controllo`) REFERENCES `controlli` (`id_controllo`);
 COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
 ;
